@@ -1,0 +1,30 @@
+
+body{
+    margin: 20px;
+    padding: 0;
+}
+
+.cor1{
+    padding:0 15px;
+    background-color:hsl(110, 100%, 54%);
+}
+
+.cor2{
+    padding:0 15px;
+    background-color:hsl(303, 61%, 73%);
+}
+.cor3{
+    padding:0 15px;
+    background-color:hsl(310, 43%, 47%);
+}
+
+.cor4{
+    padding:0 15px;
+    background-color:hsl(0, 88%, 31%);
+
+}
+
+.cor5{
+    padding:0 15px;
+    background-color:hsl(271, 69%, 42%);
+}

@@ -1,0 +1,100 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(255, 244, 244);
+}
+
+header{
+    padding: 40px;
+    background-color: bisque;
+    color: rgb(179, 145, 103);
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    background-color: bisque;
+    color: rgb(179, 145, 103);
+}
+
+.link-container {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 25px;
+    padding: 40px;
+    justify-content: center;
+}
+
+p, a {
+    font-weight: 700;
+}
+
+.link-container a {
+    display: flex;
+    flex: 1 1 25vw;
+    padding: 25px;
+    min-width: 25%;
+    max-width: 25vw;
+    height: 30vh;
+    border-radius: 10px;
+    background-color: rgb(253, 221, 218);
+
+    font-size: 24px;
+    text-decoration: none;
+    color: rgb(201, 144, 137);
+    justify-content: center;
+    align-items: center;
+
+    transition: all 500ms;
+}
+
+.link-1{
+    padding: 18px !important;
+    border: 7px solid rgb(253, 221, 218);
+}
+
+.link-1:hover{
+    opacity: 0.5;
+    border: 7px solid rgb(247, 194, 188);
+}
+
+.link-2:hover{
+    background-color: rgb(247, 194, 188);
+}
+
+.link-3:hover{
+    background: linear-gradient(rgb(253, 221, 218), rgb(240, 188, 182));
+}
+
+.link-4:hover{
+    transform: scale(1.07);
+}
+
+.link-5:hover{
+    transform: scale(0.9);
+}
+
+.link-6:hover{
+    transform: rotate(10deg);
+}
+
+.link-7:hover{
+    transform: rotate(360deg);
+}
+
+.link-8:hover{
+    border-radius: 50%;
+}
+
+.link-9:hover{
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.342);
+}
+
+.link-10:hover{
+    justify-self: end;
+}

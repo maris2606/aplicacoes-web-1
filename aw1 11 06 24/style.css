@@ -1,0 +1,15 @@
+body{
+    color: red;
+}
+
+span{
+    color: aqua;
+}
+
+body > h1#titulo.azul {
+    color: blue;
+}
+
+#elemento-3{
+    color:cornflowerblue;
+}
