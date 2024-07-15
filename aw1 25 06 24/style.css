@@ -1,0 +1,164 @@
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 140vh;
+}
+
+footer {
+    padding: 40px;
+    text-align: center;
+    background-color: rgb(121, 161, 196);
+
+}
+
+header{
+    padding: 40px;
+    background-color: rgb(121, 161, 196);
+    animation-name: cor;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+header h1 {
+    width: max-content;
+
+    animation-name: roda;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction:alternate;
+}
+
+section{
+    padding: 40px;
+    background-color: rgb(200, 220, 238);
+    height: 100%;
+}
+
+div {
+    display: block;
+    height: min-content;
+
+}
+
+#pato1{
+    
+    animation-delay: 1s;
+
+    animation-timing-function: ease-in-out;
+    animation-name: animacao;
+    animation-direction: alternate;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+
+    position: absolute;
+    top: 80%;
+}
+
+#pato2{
+    
+    animation-delay: 500ms;
+
+    animation-timing-function: ease-in-out;
+    animation-name: animacao;
+    animation-direction: alternate;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+
+    position: absolute;
+    top: 80%;
+}
+
+#pato3{
+    
+    animation-delay: 0;
+
+    animation-timing-function: ease-in-out;
+    animation-name: animacao;
+    animation-direction: normal;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+
+    position: absolute;
+    top: 80%;
+}
+
+img {
+    height: 200px;
+}
+
+.h2-animacao{
+    width: 400px;
+    background-color: aliceblue;
+    animation-name: text;
+    animation-duration: 5s;
+    padding: 15px;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+#animacao-1{
+    background-color: rgb(233, 166, 166);
+    animation-fill-mode: none;
+}
+
+#animacao-2{
+    background-color: rgb(206, 188, 240);
+    animation-fill-mode: forwards;
+
+}
+
+#animacao-3{
+    background-color: rgb(188, 235, 188);
+    animation-fill-mode: backwards;
+    animation-delay: 3s;
+}
+
+#animacao-4{
+    background-color: rgb(224, 199, 182);
+    animation-fill-mode: both;
+    animation-delay: 3s;
+
+}
+
+
+@keyframes animacao {
+    from {
+        left: 3vw;
+    }
+    to {
+        left: 80vw;
+    }
+}
+
+@keyframes roda {
+    from{
+        rotate: 0;
+    }
+    to{
+        rotate: 360deg;
+    }
+}
+
+@keyframes cor {
+    from{
+        
+    }
+    to{
+        filter: hue-rotate(360deg);
+    }
+}
+
+
+@keyframes text {
+    from{
+        margin-left: 0;
+
+    }
+    to{
+        margin-left: 80%;
+    }
+}
