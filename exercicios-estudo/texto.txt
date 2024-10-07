@@ -1,0 +1,143 @@
+Manipulação do DOM
+Selecionar Elementos:
+
+document.getElementById(id) 
+- Seleciona um elemento pelo seu id.
+
+document.getElementsByClassName(class) 
+- Seleciona todos os elementos de uma classe específica.
+
+document.getElementsByTagName(tag) 
+- Seleciona todos os elementos de uma tag específica.
+
+document.querySelector(selector) 
+- Seleciona o primeiro elemento que corresponde a um seletor CSS.
+
+document.querySelectorAll(selector) 
+- Seleciona todos os elementos que correspondem a um seletor CSS.
+
+
+Manipular o Conteúdo de Elementos:
+
+element.innerHTML - Obtém ou define o conteúdo HTML de um elemento.
+element.textContent - Obtém ou define o conteúdo de texto de um elemento.
+element.setAttribute(name, value) - Define o valor de um atributo.
+element.getAttribute(name) - Obtém o valor de um atributo.
+
+
+Criar e Remover Elementos:
+
+document.createElement(tagName) 
+- Cria um novo elemento do tipo especificado.
+
+parent.appendChild(child) 
+- Adiciona um elemento filho ao final de um elemento pai.
+
+parent.insertBefore(newElement, referenceElement) 
+- Insere um novo elemento antes de um elemento de referência.
+
+element.remove() - Remove o elemento do DOM.
+
+element.replaceChild(newChild, oldChild) 
+- Substitui um filho por outro.
+
+
+Classes e Atributos:
+
+element.classList.add(className) 
+- Adiciona uma classe a um elemento.
+
+element.classList.remove(className) 
+- Remove uma classe de um elemento.
+
+element.classList.toggle(className) 
+- Adiciona ou remove uma classe, dependendo de sua existência.
+
+element.classList.contains(className) 
+- Verifica se o elemento tem uma determinada classe.
+
+
+Manipulação de Estilos
+Estilos Inline:
+
+element.style.property = value 
+- Define o estilo de um elemento diretamente.
+
+Exemplo: element.style.backgroundColor = 'red'
+
+
+Obter Estilos Computados:
+
+window.getComputedStyle(element) 
+- Obtém todos os estilos calculados aplicados a um elemento.
+
+
+Manipulação de CSS:
+
+element.className 
+- Define ou obtém o valor do atributo class de um elemento.
+
+element.style.cssText 
+- Define o estilo completo de um elemento por meio de uma string.
+
+
+Manipulação de Eventos
+Adicionar Eventos:
+
+element.addEventListener('event', callback) 
+- Adiciona um listener para um evento. Exemplo:
+
+
+
+
+
+button.addEventListener('click', function() {
+  console.log('Botão clicado');
+});
+
+
+Remover Eventos:
+
+element.removeEventListener('event', callback) - Remove um listener de evento associado anteriormente.
+Eventos Comuns:
+
+
+
+click - Disparado quando o usuário clica em um elemento.
+
+mouseover - Disparado quando o ponteiro do mouse passa sobre um elemento.
+
+mouseout - Disparado quando o ponteiro do mouse sai de um elemento.
+
+keydown - Disparado quando uma tecla é pressionada.
+
+keyup - Disparado quando uma tecla é solta.
+
+submit - Disparado quando um formulário é enviado.
+
+
+Manipulação de Eventos com event:
+
+event.preventDefault() 
+- Impede o comportamento padrão do evento, como o envio de um formulário.
+
+event.stopPropagation() 
+- Impede que o evento se propague para outros elementos (event bubbling).
+
+event.target 
+- Refere-se ao elemento que acionou o evento.
+
+
+Exemplo Completo:
+
+// Selecionar um elemento
+const button = document.getElementById('myButton');
+
+// Alterar o texto de um elemento
+button.textContent = "Clique aqui";
+
+// Adicionar um evento de clique
+button.addEventListener('click', function() {
+    button.style.backgroundColor = 'blue'; // Alterar o estilo ao clicar
+    alert("Botão foi clicado!");
+});
