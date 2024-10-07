@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 11 - JS</title>
+
+    <script type="text/javascript">
+        function pegar_altura() {
+            var altura = window.innerHeight; 
+            document.getElementById('resultado').innerHTML = "Altura da tela = " + altura + "px";
+        }
+
+        function pegar_largura() {
+            var largura = window.innerWidth; 
+            document.getElementById('resultado').innerHTML = "Largura da tela = " + largura + "px";
+        }
+
+        function pegar_linguagem() {
+            var linguagem = navigator.language ; 
+            document.getElementById('resultado').innerHTML = "Linguagem da tela = " + linguagem;
+        }
+
+        function pegar_geolocalizacao() {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var geolocalizacao = "Latitude: " + position.coords.latitude + ", Longitude: " + position.coords.longitude;
+                document.getElementById('resultado').innerHTML = "Geolocalização da Página = " + geolocalizacao;
+            });
+        }
+        function pegar_plataforma() {
+            var plataforma = navigator.platform ; 
+            document.getElementById('resultado').innerHTML = "Plataforma = " + plataforma;
+        }
+
+    function fatorial (n){
+        var a;
+
+        document.getElementById ('conta_fatorial').innerHTML += n;
+        if(n ==0 || n==1) {
+            a = 1;
+        } else {
+            document.getElementById ('conta_fatorial').innerHTML += " * ";
+            a = n * fatorial (n-1);
+            return a;
+        }
+        return a;
+
+    }
+
+    function calcularFatorial() {
+        const numero = parseInt(prompt("Digite um número para calcular o fatorial:"));
+        const resultado = fatorial(numero);
+        document.getElementById("resultado").innerHTML = "Resultado: " + resultado;    
+}
+    </script>
+</head>
+
+<body>
+    <div class="botoes">
+        <button onclick="pegar_altura()">Altura da Página</button>
+        <button onclick="pegar_largura()">Largura da Página</button>
+        <button onclick="pegar_linguagem()">Linguagem da Página</button>
+        <button onclick="pegar_geolocalizacao()">Geolocalização da Página</button>
+        <button onclick="pegar_plataforma()">Plataforma</button>
+        <button onclick="calcularFatorial()">fatorial</button>
+    </div>
+    <div id="conta_fatorial"></div>
+    <div id="resultado" class="classe1"></div> 
+</body>
+
+</html>
